@@ -393,30 +393,23 @@
 
 
 
-
-
-
-<!-- 在layout/_partial目录下的article.ejs文件内新增gitalk相关的配置代码 -->
-
-<div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-  if ( < %= theme.gitalk.enable % > ) {
-    var gitalk = new Gitalk({
-      clientID: 'aa4de24765955880c857',
-      clientSecret: '8264e2deb9e7fb25991e76c9d07c6a99981718d0',
-      repo: 'coderYan1998.github.io',
-      owner: 'coderYan1998',
-      admin: ['coderYan1998'],
-      id: 'Mon Mar 02 2020 18:00:27 GMT+0800',
-      distractionFreeMode: 'true'
-    })
-    gitalk.render('gitalk-container')
-  }
+<div id="gitment-ctn"></div>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: "Mon Mar 02 2020 18:00:27 GMT+0800",
+    owner: 'coderYan1998',
+    repo: 'coderYan1998.github.io',
+    oauth: {
+      client_id: 'aa4de24765955880c857',
+      client_secret: '8264e2deb9e7fb25991e76c9d07c6a99981718d0',
+    },
+  })
+  gitment.render('gitment-ctn')
 
 </script>
+
 
 
 
@@ -593,7 +586,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">你已成功引起我的注意~~~ 我会经常更新的可以长来看看我喔,毕竟我俩的关系这么好！</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">你已成功引起我的注意~~~ &lt;br&gt;我会经常更新的可以长来看看我喔,毕竟我俩的关系这么好！</div>
   	  	
     	</section>
     
